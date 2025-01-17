@@ -32,5 +32,4 @@ const CustomRoutes = ({ routes, defaultRoute }) => {
     </div>
   );
 };
-
 export default CustomRoutes;

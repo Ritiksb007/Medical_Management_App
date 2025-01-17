@@ -1,9 +1,18 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    // Try fetching the stored login state from localStorage
+    const storedState = localStorage.getItem("isLoggedIn");
+    return storedState ? JSON.parse(storedState) : false;
+  });
+
+  // Update localStorage whenever isLoggedIn changes
+  useEffect(() => {
+    localStorage.setItem("isLoggedIn", JSON.stringify(isLoggedIn));
+  }, [isLoggedIn]);
 
   const login = () => {
     setIsLoggedIn(true);
@@ -11,6 +20,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     setIsLoggedIn(false);
+    localStorage.removeItem("isLoggedIn"); // Ensure you clear localStorage on logout
   };
 
   return (

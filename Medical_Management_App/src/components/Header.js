@@ -3,8 +3,8 @@ import { Box, Text } from "grommet";
 
 const Header = () => (
   <Box background="brand" pad="medium">
-    <Text size="large" weight="bold" color="white">
-      Grommet React App
+    <Text size="large" weight="bold" color="white" alignSelf="center">
+      Doctor's Management App
     </Text>
   </Box>
 );

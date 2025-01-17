@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
-import { Box, Button, Text, TextInput, Form, FormField, Heading } from "grommet";
+import { Box, Button, TextInput, Form, FormField, Heading } from "grommet";
 
 const Index = () => {
   const [username, setUsername] = useState("");
