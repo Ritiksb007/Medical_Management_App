@@ -5,7 +5,7 @@ A web application designed to efficiently manage healthcare operations, includin
 ---
 # **Please Use Following Link To Download**
 [**Link To Download Zip File**](https://drive.google.com/file/d/1eqmFjZRqRDl4E2rqviSTetA7WoVd-2qp/view?usp=sharing)
-
+## Username and Password is "admin".
 
 ## **Features**
 
